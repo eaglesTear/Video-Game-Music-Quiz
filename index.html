@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test Your Knowledge - Quiz Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jquery-ui.css">
+</head>
+
+<body>
+
+    <!-- SET UP TABS USING jQUERY UI -->
+    <div id="page-tabs">
+       
+        <ul>
+            <li><a href="#quiz-pg-1">Quiz 1</a></li>
+            <li><a href="#quiz-pg-2">Quiz 2</a></li>
+            <li><a href="#quiz-pg-3">Quiz 3</a></li>
+        </ul>
+        
+        <div id="quiz-pg-1">
+            <!-- <div id="progbar"></div> -->
+            <header>
+                <h1>Videogame OST Quiz</h1>
+                <p class="header-p">How well do you know your videogame music?</p>
+            </header>
+            <h2>How to Play</h2>
+            <p>When ready, click the <mark><i>Start</i></mark> button to begin the game / quiz. Read the questions, click the buttons in each question box to listen to a piece of video game music, then select the answer you think is correct. Hints are available for you to use.<br><br>
+                You have <mark><i>90 seconds</i></mark> to complete the quiz. When you are done, click <mark><i>Finish</i></mark> to tally your score, but <strong>WATCH OUT:</strong> if the counter reaches 0, your score will also be 0!</p>
+                
+            <main>
+               
+                <div id="time-display">
+                    <span class="timer">GET READY!<br><br>Time remaining: 1:20</span>
+                </div>
+                <div id="test-alert" title="Game Over!">
+                    Click "Reset" to play again
+                </div>
+                <button id="start">START</button>
+                
+                <div class="flex-container">
+                    <div class="btn-wrapper">
+                        <button id="track-1">Track 1</button>
+                    </div>
+                    <div>
+                        <fieldset>
+                            <legend>
+                                Q1. This track plays at the title screen of which game?
+                            </legend>
+                            <input type="radio" name="q-1" value="1">Super Mario World<br>
+                            <input id="ans-2" type="radio" name="q-1" value="2">Sonic the Hedgehog<br>
+                            <input type="radio" name="q-1" value="3">Super Metroid
+                        </fieldset>
+                        <button id="show-Q1-hint">Hint</button>
+                        <img id="error-1" src="media/error.svg" alt="error 'x'" />
+                        <img id="check-1" src="media/001-correct.svg" alt="green check mark" />
+                        <p id="hint-Q1">Hmm...really?</p>
+                    </div>
+                </div>
+                
+                <div class="flex-container">
+                    <div class="btn-wrapper">
+                        <button id="track-2">Track 2</button>
+                    </div>
+                    <div>
+                        <fieldset>
+                            <legend>
+                                Q2. In which real-time strategy game will you hear this soundtrack?
+                            </legend>
+                            <input type="radio" name="q-2" value="1">Emperor: The Battle for Dune<br>
+                            <input type="radio" name="q-2" value="2">Command &amp; Conquer<br>
+                            <input type="radio" name="q-2" value="3">Universe at War
+                        </fieldset>
+                        <button id="show-Q2-hint">Hint</button>
+                        <img id="error-2" src="media/error.svg" alt="error 'x'" />
+                        <img id="check-2" src="media/001-correct.svg" alt="green check mark" />
+                        <p id="hint-Q2">
+                            Saw more sequels than any other RTS, including the ill-received <b><i>Tiberium Twilight</i></b>.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex-container">
+                    <div class="btn-wrapper">
+                        <button id="track-3">Track 3</button>
+                    </div>
+                    <div>
+                        <fieldset>
+                            <legend>
+                                Q3. In <b><i>Emperor: The Battle for Dune</i></b>, which faction goes into battle with this theme?
+                            </legend>
+                            <input type="radio" name="q-3" value="1">Harkonnen<br>
+                            <input type="radio" name="q-3" value="2">Ordos<br>
+                            <input type="radio" name="q-3" value="3">Atreides
+                        </fieldset>
+                        <button id="show-Q3-hint">Hint</button>
+                        <img id="error-3" src="media/error.svg" alt="error 'x'" />
+                        <img id="check-3" src="media/001-correct.svg" alt="green check mark" />
+                        <p id="hint-Q3">
+                            Known to be the most aggressive and evil faction in <b><i>Frank Herbert's</i></b> classic novel.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex-container">
+                    <div class="btn-wrapper">
+                        <button id="track-4">Track 4</button>
+                    </div>
+                    <div>
+                        <fieldset>
+                            <legend>
+                                Q4. This is the opening theme to which Hitman game?
+                            </legend>
+                            <input type="radio" name="q-4" value="1">Hitman: Contracts<br>
+                            <input type="radio" name="q-4" value="2">Hitman: Blood Money<br>
+                            <input type="radio" name="q-4" value="3">Hitman 2: Silent Assassin
+                        </fieldset>
+                        <button id="show-Q4-hint">Hint</button>
+                        <img id="error-4" src="media/error.svg" alt="error 'x'" />
+                        <img id="check-4" src="media/001-correct.svg" alt="green check mark" />
+                        <p id="hint-Q4">
+                            The fourth installment in the classic series.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex-container">
+                    <div class="btn-wrapper">
+                        <button id="track-5">Track 5</button>
+                    </div>
+                    <div>
+                        <fieldset>
+                            <legend>
+                                Q5. This famous track is played on the title screen of which famous game?
+                            </legend>
+                            <input type="radio" name="q-5" value="1">F-Zero<br>
+                            <input type="radio" name="q-5" value="2">Extreme-G<br>
+                            <input type="radio" name="q-5" value="3">Wipeout 2097
+                        </fieldset>
+                        <button id="show-Q5-hint">Hint</button>
+                        <img id="error-5" src="media/error.svg" alt="error 'x'" />
+                        <img id="check-5" src="media/001-correct.svg" alt="green check mark" />
+                        <p id="hint-Q5">
+                            Developed by Liverpool-based <b><i>Psygnosis</i></b>.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex-container">
+                    <div class="btn-wrapper">
+                        <button id="track-6">Track 6</button>
+                    </div>
+                    <div>
+                        <fieldset>
+                            <legend>
+                                Q6. What <b><i>Street Fighter</i></b> character has this theme?
+                            </legend>
+                            <input type="radio" name="q-6" value="1">Vega<br>
+                            <input type="radio" name="q-6" value="2">Cammy<br>
+                            <input type="radio" name="q-6" value="3">Zangief
+                        </fieldset>
+                        <button id="show-Q6-hint">Hint</button>
+                        <img id="error-6" src="media/error.svg" alt="error 'x'" />
+                        <img id="check-6" src="media/001-correct.svg" alt="green check mark" />
+                        <p id="hint-Q6">
+                            FOR MOTHER RUSSIA!!!
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex-container">
+                    <div class="btn-wrapper">
+                        <button id="track-7">Track 7</button>
+                    </div>
+                    <div>
+                        <fieldset>
+                            <legend>
+                                Q7. During which game will you hear this tune?
+                            </legend>
+                            <input type="radio" name="q-7" value="1">Street Fighter III: Third Strike<br>
+                            <input type="radio" name="q-7" value="2">R4: Ridge Racer Type 4<br>
+                            <input type="radio" name="q-7" value="3">Capcom vs. SNK 2: Mark of the Millenium
+                        </fieldset>
+                        <button id="show-Q7-hint">Hint</button>
+                        <img id="error-7" src="media/error.svg" alt="error 'x'" />
+                        <img id="check-7" src="media/001-correct.svg" alt="green check mark" />
+                        <p id="hint-Q7">
+                            One of it's predecessors was a launch title for the PS1.
+                        </p>
+                    </div>
+                </div>
+                
+                <button id="calc">FINISH</button>
+                <button id="stop">RESET</button>
+                <div id="answer-area">SCORE:</div>
+                
+            </main>
+            
+            <button id="alarm-disable">DISABLE ALARM</button>
+            
+        </div>
+        
+        <div id="quiz-pg-2"></div>
+        <div id="quiz-pg-3"></div>
+        
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="jquery-ui.js"></script>
+
+</body>
+
+</html>
