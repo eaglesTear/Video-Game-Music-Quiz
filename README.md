@@ -1,6 +1,8 @@
 # Video-Game-Music-Quiz
 A timed video game music quiz built with jQuery, JQuery UI and Javascript. Non-gamers may struggle, but this one's fun!
 
+*** IMPORTANT: PLEASE ALLOW AUDIO AND VIDEO IN YOUR BROWSER AND REFRESH TO LOAD WITH SOUND! ***
+
 Contains fully-styled, dynamic UI and sound effects for added enjoyment.
 
 I'll admit the JS code could be cleaner and use more functional programming concepts etc. This project was also early in my JS / programming life.
