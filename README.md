@@ -1,3 +1,6 @@
+![game_quiz](https://user-images.githubusercontent.com/68791163/135515196-6c9103b7-ce5f-4abd-9c87-e91439a1a648.PNG)
+
+
 # Video-Game-Music-Quiz
 A timed video game music quiz built with jQuery, JQuery UI and Javascript. Non-gamers may struggle, but this one's fun!
 
